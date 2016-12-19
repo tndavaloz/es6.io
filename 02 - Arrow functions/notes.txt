@@ -1,0 +1,13 @@
+Arrow functions are a little more concise and have an implicit return. 
+An example is something like:
+const example1 =  names.map(function(name) { return `${name} bos`; }); //regular function 
+const example2 = names.map((name) => { return `${name} bos`; }); //arrow function used
+const exmaple3 = names.map(name => { return `${name} bos`; }); //no need for parans around params
+const example4 = names.map(name => `${name} bos`); //implicit return
+const example5 = names.map(() => `cool bos`); //if no params, use empty parans
+const example6 = (name) => { alert(`Hello ${name}!`) } //anon function in a variable, not good stack trace
+If you want to return an object from an arrow function, you would need to wrap the object with parans, this lets
+it know that the curly brackets aren't function blocks.
+ProTip, use console.table(<object>) and it will give you a nice table
+Need to know benefits and downside of using arrow function, may get unexpected results: 
+Arrow functions inherits the value of properties of the parent (useful!)
